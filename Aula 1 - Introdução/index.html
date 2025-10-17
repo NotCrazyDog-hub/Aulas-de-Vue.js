@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1 class="word">{{ message }}</h1>
+        <p class="word">{{ name }}</p>
+        <input type="text" v-model="name">
+
+        <h1>Tente adivinhar a palavra</h1>
+        <div v-show="word != ''">
+            <p v-if="word == correctWord">Acertou a palavra!</p>
+            <p v-else>Errooooooou!</p>
+        </div>
+        <input type="text" v-model="word">
+    </div>
+</body>
+</html>
